@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Para vos, mi amor ❤️</title>
+
+
+  <style>
+
+    /* =====================================================
+       CONFIGURACIÓN GENERAL
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+
+    body {
+
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      margin: 0;
+      padding: 0;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+      color: white;
+
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          #54236f 0%,
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 80% 80%,
+          #25104e 0%,
+          transparent 40%
+        ),
+
+        linear-gradient(
+          135deg,
+          #080615,
+          #170b2e,
+          #35145e
+        );
+
+      position: relative;
+    }
+
+
+    /* =====================================================
+       FONDO DE ESTRELLAS
+    ===================================================== */
+
+    .stars {
+
+      position: fixed;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      pointer-events: none;
+
+      z-index: 0;
+    }
+
+
+    .star {
+
+      position: absolute;
+
+      width: 2px;
+      height: 2px;
+
+      background: white;
+
+      border-radius: 50%;
+
+      opacity: 0.6;
+
+      animation:
+        twinkle 3s infinite ease-in-out;
+    }
+
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.15;
+        transform: scale(0.7);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+
+    }
+
+
+    /* =====================================================
+       CONTENEDOR PRINCIPAL
+    ===================================================== */
+
+    .container {
+
+      position: relative;
+
+      z-index: 5;
+
+      width: 100%;
+
+      max-width: 700px;
+
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      margin: 0 auto;
+
+      padding:
+        35px 20px 70px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+    }
+
+
+    /* =====================================================
+       INTRODUCCIÓN
+    ===================================================== */
+
+    .intro {
+
+      width: 100%;
+
+      margin-bottom: 30px;
+
+      text-align: center;
+
+      transition:
+        opacity 0.5s ease;
+    }
+
+
+    .intro h2 {
+
+      width: 100%;
+
+      font-size: clamp(
+        1.1rem,
+        4vw,
+        1.45rem
+      );
+
+      font-weight: 400;
+
+      line-height: 1.55;
+
+      letter-spacing: 1px;
+
+      color:
+        rgba(255,255,255,0.94);
+
+      animation:
+        appear 1.5s ease forwards;
+    }
+
+
+    .intro p {
+
+      margin-top: 12px;
+
+      font-size: 0.95rem;
+
+      color:
+        rgba(255,255,255,0.65);
+
+      animation:
+        appear 2s ease forwards;
+    }
+
+
+    @keyframes appear {
+
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+
+    /* =====================================================
+       CAJA MÁGICA
+    ===================================================== */
+
+    .magic-box {
+
+      width: 160px;
+      height: 160px;
+
+      flex-shrink: 0;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      font-size: 78px;
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.20),
+          rgba(255,255,255,0.05)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,0.35);
+
+      backdrop-filter:
+        blur(15px);
+
+      -webkit-backdrop-filter:
+        blur(15px);
+
+      box-shadow:
+
+        0 0 30px
+        rgba(255,80,170,0.4),
+
+        0 0 70px
+        rgba(140,70,255,0.15);
+
+      cursor: pointer;
+
+      user-select: none;
+
+      -webkit-tap-highlight-color:
+        transparent;
+
+      animation:
+        boxPulse 2.3s infinite ease-in-out;
+
+      transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+    }
+
+
+    .magic-box:active {
+      transform: scale(0.9);
+    }
+
+
+    @keyframes boxPulse {
+
+      0%,
+      100% {
+
+        box-shadow:
+
+          0 0 30px
+          rgba(255,80,170,0.35),
+
+          0 0 60px
+          rgba(140,70,255,0.12);
+      }
+
+
+      50% {
+
+        box-shadow:
+
+          0 0 55px
+          rgba(255,80,170,0.75),
+
+          0 0 110px
+          rgba(140,70,255,0.25);
+      }
+
+    }
+
+
+    /* =====================================================
+       TEXTO "TOCÁ LA CAJA"
+    ===================================================== */
+
+    .hint {
+
+      width: 100%;
+
+      margin-top: 23px;
+
+      font-size: 0.95rem;
+
+      letter-spacing: 1.5px;
+
+      color:
+        rgba(255,255,255,0.75);
+
+      text-align: center;
+
+      animation:
+        hintPulse 2s infinite;
+
+      transition:
+        opacity 0.5s ease;
+    }
+
+
+    @keyframes hintPulse {
+
+      0%,
+      100% {
+        opacity: 0.4;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+    }
+
+
+    /* =====================================================
+       CARTA
+    ===================================================== */
+
+    .card {
+
+      display: none;
+
+      width: 100%;
+
+      max-width: 600px;
+
+      margin: 20px auto 0;
+
+      padding:
+        38px 30px 45px;
+
+      border-radius: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.17),
+          rgba(255,255,255,0.055)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      box-shadow:
+
+        0 25px 70px
+        rgba(0,0,0,0.5),
+
+        0 0 50px
+        rgba(255,80,170,0.15);
+
+      text-align: center;
+
+      animation:
+        cardAppear 1.3s ease forwards;
+    }
+
+
+    @keyframes cardAppear {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(40px)
+          scale(0.92);
+      }
+
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+      }
+
+    }
+
+
+    /* =====================================================
+       CORAZÓN
+    ===================================================== */
+
+    .heart-icon {
+
+      font-size: 52px;
+
+      margin-bottom: 12px;
+
+      animation:
+        heartbeat 1.5s infinite;
+    }
+
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      15% {
+        transform: scale(1.2);
+      }
+
+      30% {
+        transform: scale(1);
+      }
+
+      45% {
+        transform: scale(1.12);
+      }
+
+    }
+
+
+    /* =====================================================
+       TÍTULO DE LA CARTA
+    ===================================================== */
+
+    .card h1 {
+
+      width: 100%;
+
+      margin-bottom: 28px;
+
+      font-size:
+        clamp(
+          1.45rem,
+          5vw,
+          1.9rem
+        );
+
+      font-weight: 500;
+
+      color: #ff9fbd;
+
+      text-align: center;
+
+      text-shadow:
+        0 0 18px
+        rgba(255,100,160,0.4);
+    }
+
+
+    /* =====================================================
+       TEXTO DE LA CARTA
+    ===================================================== */
+
+    .message {
+
+      width: 100%;
+
+      font-size:
+        clamp(
+          1rem,
+          3.8vw,
+          1.12rem
+        );
+
+      line-height: 1.9;
+
+      color:
+        rgba(255,255,255,0.94);
+
+      text-align: left;
+
+      word-wrap: break-word;
+
+      overflow-wrap: break-word;
+
+      letter-spacing: 0.15px;
+    }
+
+
+    /* =====================================================
+       FIRMA
+    ===================================================== */
+
+    .signature {
+
+      width: 100%;
+
+      margin-top: 35px;
+
+      padding-top: 25px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.12);
+
+      font-size: 1.05rem;
+
+      color: #ff9fbd;
+
+      text-align: center;
+
+      opacity: 0;
+
+      animation:
+        signatureAppear 1s ease 8s forwards;
+    }
+
+
+    @keyframes signatureAppear {
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
+
+    /* =====================================================
+       CORAZONES FLOTANTES
+    ===================================================== */
+
+    .heart {
+
+      position: fixed;
+
+      bottom: -50px;
+
+      pointer-events: none;
+
+      z-index: 3;
+
+      animation:
+        floatHeart linear forwards;
+
+      filter:
+        drop-shadow(
+          0 0 8px
+          rgba(255,80,150,0.7)
+        );
+    }
+
+
+    @keyframes floatHeart {
+
+      0% {
+
+        transform:
+
+          translateY(0)
+
+          translateX(0)
+
+          rotate(0deg)
+
+          scale(0.6);
+
+        opacity: 0;
+      }
+
+
+      10% {
+        opacity: 1;
+      }
+
+
+      50% {
+
+        transform:
+
+          translateY(-50vh)
+
+          translateX(35px)
+
+          rotate(180deg)
+
+          scale(1);
+      }
+
+
+      100% {
+
+        transform:
+
+          translateY(-115vh)
+
+          translateX(-40px)
+
+          rotate(360deg)
+
+          scale(1.3);
+
+        opacity: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       DESTELLO
+    ===================================================== */
+
+    .flash {
+
+      position: fixed;
+
+      width: 10px;
+      height: 10px;
+
+      left: 50%;
+      top: 50%;
+
+      margin-left: -5px;
+      margin-top: -5px;
+
+      border-radius: 50%;
+
+      background: white;
+
+      pointer-events: none;
+
+      z-index: 20;
+
+      animation:
+        flashEffect
+        0.8s
+        ease-out
+        forwards;
+    }
+
+
+    @keyframes flashEffect {
+
+      from {
+
+        transform:
+          scale(1);
+
+        opacity: 1;
+      }
+
+
+      to {
+
+        transform:
+          scale(40);
+
+        opacity: 0;
+      }
+
+    }
+
+
+    /* =====================================================
+       CELULAR
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .container {
+
+        padding:
+          30px 16px 60px;
+      }
+
+
+      .magic-box {
+
+        width: 145px;
+        height: 145px;
+
+        font-size: 70px;
+      }
+
+
+      .card {
+
+        padding:
+          32px 22px 40px;
+
+        border-radius: 25px;
+      }
+
+
+      .message {
+
+        line-height: 1.85;
+
+        text-align: left;
+      }
+
+    }
+
+
+    /* =====================================================
+       CELULARES MUY PEQUEÑOS
+    ===================================================== */
+
+    @media (max-width: 380px) {
+
+      .container {
+
+        padding:
+          25px 14px 55px;
+      }
+
+
+      .magic-box {
+
+        width: 135px;
+        height: 135px;
+
+        font-size: 64px;
+      }
+
+
+      .card {
+
+        padding:
+          28px 18px 35px;
+      }
+
+
+      .message {
+
+        font-size: 0.98rem;
+
+        line-height: 1.8;
+      }
+
+    }
+
+
+    /* =====================================================
+       COMPUTADORA
+    ===================================================== */
+
+    @media (min-width: 900px) {
+
+      .container {
+
+        max-width: 850px;
+
+        padding:
+          50px 30px 100px;
+      }
+
+
+      .card {
+
+        max-width: 650px;
+
+        padding:
+          45px 45px 55px;
+      }
+
+
+      .message {
+
+        font-size: 1.12rem;
+
+        line-height: 2;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       ESTRELLAS
+  ===================================================== -->
+
+  <div
+    class="stars"
+    id="stars">
+  </div>
+
+
+  <!-- =====================================================
+       CONTENIDO
+  ===================================================== -->
+
+  <main class="container">
+
+
+    <!-- INTRO -->
+
+    <div
+      class="intro"
+      id="intro">
+
+      <h2>
+
+        Para la persona que amo,<br>
+
+        aunque hoy esté lejos... ❤️
+
+      </h2>
+
+
+      <p>
+
+        Hay algo que quiero decirte.
+
+      </p>
+
+    </div>
+
+
+    <!-- CAJA -->
+
+    <div
+      id="magicBox"
+      class="magic-box"
+      aria-label="Abrir sorpresa">
+
+      🎁
+
+    </div>
+
+
+    <!-- INDICACIÓN -->
+
+    <div
+      id="hintText"
+      class="hint">
+
+      Tocá la caja
+
+    </div>
+
+
+    <!-- =================================================
+         CARTA
+    ================================================== -->
+
+    <section
+      id="loveCard"
+      class="card">
+
+
+      <div class="heart-icon">
+
+        ❤️
+
+      </div>
+
+
+      <h1>
+
+        Para vos, mi amor
+
+      </h1>
+
+
+      <p
+        id="message"
+        class="message">
+      </p>
+
+
+      <div class="signature">
+
+        Te amo, incluso a la distancia. ❤️
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       MÚSICA
+
+       La canción está en:
+
+       audio/audio.mp3
+  ===================================================== -->
+
+  <audio
+    id="audioPlayer"
+    src="audio/audio.mp3"
+    preload="auto">
+  </audio>
+
+
+  <script>
+
+
+    /* =====================================================
+       ELEMENTOS
+    ===================================================== */
+
+    const box =
+      document.getElementById(
+        "magicBox"
+      );
+
+
+    const hint =
+      document.getElementById(
+        "hintText"
+      );
+
+
+    const intro =
+      document.getElementById(
+        "intro"
+      );
+
+
+    const card =
+      document.getElementById(
+        "loveCard"
+      );
+
+
+    const message =
+      document.getElementById(
+        "message"
+      );
+
+
+    const audio =
+      document.getElementById(
+        "audioPlayer"
+      );
+
+
+    const stars =
+      document.getElementById(
+        "stars"
+      );
+
+
+    /* =====================================================
+       MENSAJE ROMÁNTICO
+    ===================================================== */
+
+    const loveMessage =
+
+      "Aunque hoy nos separen kilómetros, " +
+
+      "hay algo que la distancia nunca pudo separar: " +
+
+      "lo que siento por vos. " +
+
+      "A veces me gustaría poder atravesar esa distancia " +
+
+      "en un instante, abrazarte fuerte y quedarme ahí, " +
+
+      "sin tener que despedirme. " +
+
+      "Sé que no siempre es fácil amarnos desde lejos, " +
+
+      "extrañarnos, esperar, mirar una pantalla " +
+
+      "y desear tenerte a mi lado. " +
+
+      "Pero incluso en los días en los que más te extraño, " +
+
+      "te volvería a elegir una y mil veces. " +
+
+      "Porque no quiero solamente los momentos fáciles con vos; " +
+
+      "quiero todo lo que venga, incluso los kilómetros " +
+
+      "que hoy nos toca soportar. " +
+
+      "Quiero que algún día podamos mirar atrás " +
+
+      "y decir: valió la pena esperar. " +
+
+      "Y cuando finalmente pueda tenerte frente a mí, " +
+
+      "quiero abrazarte tan fuerte que por un momento " +
+
+      "desaparezca toda la distancia que hubo entre nosotros. " +
+
+      "Hasta que llegue ese día, quiero que nunca olvides algo: " +
+
+      "estés donde estés, hay alguien acá que te piensa, " +
+
+      "te extraña y te ama muchísimo. " +
+
+      "Te amo, mi amor. " +
+
+      "Y aunque hoy haya miles de kilómetros entre nosotros, " +
+
+      "mi corazón siempre encuentra la forma " +
+
+      "de estar cerca tuyo. ❤️";
+
+
+    /* =====================================================
+       CREAR ESTRELLAS
+    ===================================================== */
+
+    function createStars() {
+
+      for (
+        let i = 0;
+        i < 90;
+        i++
+      ) {
+
+        const star =
+          document.createElement(
+            "div"
+          );
+
+
+        star.classList.add(
+          "star"
+        );
+
+
+        star.style.left =
+          Math.random() * 100 +
+          "%";
+
+
+        star.style.top =
+          Math.random() * 100 +
+          "%";
+
+
+        star.style.animationDelay =
+          Math.random() * 3 +
+          "s";
+
+
+        star.style.animationDuration =
+          2 +
+          Math.random() * 3 +
+          "s";
+
+
+        stars.appendChild(
+          star
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       ESCRIBIR CARTA
+    ===================================================== */
+
+    function typeMessage() {
+
+      let index = 0;
+
+      message.innerHTML = "";
+
+
+      function write() {
+
+        if (
+          index <
+          loveMessage.length
+        ) {
+
+          message.innerHTML +=
+            loveMessage.charAt(
+              index
+            );
+
+
+          index++;
+
+
+          setTimeout(
+            write,
+            28
+          );
+
+        }
+
+      }
+
+
+      write();
+
+    }
+
+
+    /* =====================================================
+       CREAR CORAZONES
+    ===================================================== */
+
+    function createHeart() {
+
+      const heart =
+        document.createElement(
+          "div"
+        );
+
+
+      heart.classList.add(
+        "heart"
+      );
+
+
+      const hearts = [
+
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘"
+
+      ];
+
+
+      heart.innerHTML =
+        hearts[
+          Math.floor(
+            Math.random() *
+            hearts.length
+          )
+        ];
+
+
+      heart.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+      heart.style.fontSize =
+        15 +
+        Math.random() *
+        25 +
+        "px";
+
+
+      const duration =
+        4 +
+        Math.random() *
+        4;
+
+
+      heart.style.animationDuration =
+        duration +
+        "s";
+
+
+      document.body.appendChild(
+        heart
+      );
+
+
+      setTimeout(
+        () => {
+
+          heart.remove();
+
+        },
+        duration * 1000
+      );
+
+    }
+
+
+    /* =====================================================
+       EXPLOSIÓN DE CORAZONES
+    ===================================================== */
+
+    function heartExplosion() {
+
+      for (
+        let i = 0;
+        i < 40;
+        i++
+      ) {
+
+        setTimeout(
+          () => {
+
+            createHeart();
+
+          },
+          i * 55
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       DESTELLO
+    ===================================================== */
+
+    function createFlash() {
+
+      const flash =
+        document.createElement(
+          "div"
+        );
+
+
+      flash.classList.add(
+        "flash"
+      );
+
+
+      document.body.appendChild(
+        flash
+      );
+
+
+      setTimeout(
+        () => {
+
+          flash.remove();
+
+        },
+        800
+      );
+
+    }
+
+
+    /* =====================================================
+       ABRIR SORPRESA
+    ===================================================== */
+
+    box.addEventListener(
+      "click",
+      () => {
+
+
+        /* DESTELLO */
+
+        createFlash();
+
+
+        /* CAJA */
+
+        box.style.transform =
+          "scale(1.5)";
+
+
+        box.style.opacity =
+          "0";
+
+
+        intro.style.opacity =
+          "0";
+
+
+        hint.style.opacity =
+          "0";
+
+
+        /* =================================================
+           MÚSICA
+        ================================================= */
+
+        audio.volume = 0.65;
+
+        audio.currentTime = 0;
+
+
+        audio.play()
+          .catch(
+            (error) => {
+
+              console.log(
+                "No se pudo reproducir el audio:",
+                error
+              );
+
+            }
+          );
+
+
+        /* =================================================
+           MOSTRAR CARTA
+        ================================================= */
+
+        setTimeout(
+          () => {
+
+
+            box.style.display =
+              "none";
+
+
+            hint.style.display =
+              "none";
+
+
+            intro.style.display =
+              "none";
+
+
+            card.style.display =
+              "block";
+
+
+            typeMessage();
+
+
+            heartExplosion();
+
+
+            /* Llevar suavemente
+               hasta la carta */
+
+            setTimeout(
+              () => {
+
+                card.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                });
+
+              },
+              300
+            );
+
+
+          },
+          500
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       CORAZONES CONTINUOS
+    ===================================================== */
+
+    setInterval(
+      () => {
+
+        if (
+          card.style.display ===
+          "block"
+        ) {
+
+          createHeart();
+
+        }
+
+      },
+      650
+    );
+
+
+    /* =====================================================
+       INICIAR ESTRELLAS
+    ===================================================== */
+
+    createStars();
+
+
+  </script>
+
+
+</body>
+</html>
